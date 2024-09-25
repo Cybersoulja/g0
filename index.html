@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chrome Extensions 101 for New Chrome Developers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="  Chrome extensions are like add-ons that give your browser superpowers! They can change the way websites look and function, help you be more productive, and perform special actions. Extensions are made using HTML, CSS, and JavaScript.  Chrome extensions are powerful tools that can enhance the functionality of the Chrome browser. They consist of several key parts that ">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+    
+@font-face {   font-family: 'Bruno Ace SC';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(https://fonts.gstatic.com/s/brunoacesc/v5/ptROTiycffFLBuiHjdJDl634LQ.ttf) format('truetype'); } 
+@font-face {   font-family: 'Rampart One';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(https://fonts.gstatic.com/s/rampartone/v9/K2F1fZFGl_JSR1tAWNG9R6qg.ttf) format('truetype'); } 
+@font-face {   font-family: 'Righteous';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(https://fonts.gstatic.com/s/righteous/v17/1cXxaUPXBpj2rGoU7C9mjw.ttf) format('truetype'); } 
+@font-face {   font-family: 'Lexend';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(https://fonts.gstatic.com/s/lexend/v19/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LA.ttf) format('truetype'); } 
+.normal_text {
+font-family: Lexend;
+font-size: 12.0PT;
+color: #000000;
+background-color: #ffffff;
+line-height: 1.15;
+direction: ltr;
+}
+h1 {
+font-family: Bruno Ace SC;
+direction: ltr;
+}
+h2 {
+font-family: Rampart One;
+font-size: 16.0PT;
+padding-top: 18.0PT;
+padding-bottom: 6.0PT;
+line-height: 1.0;
+direction: ltr;
+}
+h3 {
+font-family: Rampart One;
+color: #4285f4;
+font-weight: bold;
+padding-top: 16.0PT;
+padding-bottom: 4.0PT;
+line-height: 1.0;
+direction: ltr;
+}
+h4 {
+font-family: Righteous;
+color: #0000ff;
+padding-top: 14.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+h5 {
+font-size: 11.0PT;
+color: #e06666;
+font-weight: bold;
+padding-top: 12.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+h6 {
+font-size: 11.0PT;
+color: #3d85c6;
+font-weight: bold;
+font-style: italic;
+padding-top: 12.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+.title {
+font-family: Righteous;
+font-size: 26.0PT;
+font-weight: bold;
+padding-bottom: 3.0PT;
+line-height: 1.0;
+direction: ltr;
+}
+.subtitle {
+font-family: Righteous;
+font-size: 15.0PT;
+color: #666666;
+padding-bottom: 16.0PT;
+direction: ltr;
+}
+
+.normal_text {
+      color: #eb0599;
+}
+@media (prefers-color-scheme: dark) {
+  .normal_text {
+        color: #cf0e0e;
+  }
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+    <ul>
+        <li><a href="index.html">Chrome Extensions 101 for New Chrome Developers</a></li>
+        <li><a href="copy-of-company-clean-newsletter.html">Copy of Company Clean Newsletter</a></li>
+        <li><a href="copy-of-company-clean-newsletter.html#copy-of-tech-service">Copy of Tech Service</a></li>
+        <li class="menu-item"><a href="create-a-google-sites-welcome-guide-for-new-users-.html">Create a Google Sites welcome guide for new users </a>
+            <div class="submenu-toggle" onclick="toggleSubmenu(event, 'submenu-1')">&#9662;</div>
+            <ul class="submenu" id="submenu-1">
+        <li><a href="dj-screw-conversation-data.html">DJ Screw Conversation Data</a></li>
+        <li class="menu-item"><a href="github-portal-page.html">GitHub Portal Page</a>
+            <div class="submenu-toggle" onclick="toggleSubmenu(event, 'submenu-2')">&#9662;</div>
+            <ul class="submenu" id="submenu-2">
+        <li><a href="--default-embed-code-for-jira-embed+.html">  Default EMBED Code for JIRA Embed+</a></li>
+            </ul>
+            </li>
+        <li><a href="--default-embed-code-for-jira-embed+.html#!!stable-diffusion-prompts">!!Stable Diffusion Prompts</a></li>
+    </ul>
+    </nav>
+</header>
+<div class="content"clear: both; overflow: auto; ">
+<div style="clear: both;">&nbsp;</div><br><p class="normal_text" style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></p><h1 style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style=''>Chrome Extensions: The Basics
+</span></h1><p class="normal_text" style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></p><p class="normal_text" style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>Chrome extensions are like add-ons that give your browser superpowers! They can change the way websites look and function, help you be more productive, and perform special actions. Extensions are made using HTML, CSS, and JavaScript.
+</span></p><p class="normal_text" style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></p><ul style="padding-left: 20.0px;"><li><span style='font-family: Arial; font-size: 11.0PT; '>Chrome extensions are powerful tools that can enhance the functionality of the Chrome browser. They consist of several key parts that work together to provide a seamless user experience.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Manifest File:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>The manifest file is a crucial component of any Chrome extension. It serves as the extension's identification card, providing essential information about the extension to the browser. This file is written in JSON format and includes details such as the extension's name, version, description, and permissions it requires. The manifest file also specifies the extension's background scripts, content scripts, and other components.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Service Worker:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>A service worker is a background process that runs separately from the main browser window, even when the extension is not actively in use. This allows the extension to perform tasks such as receiving push notifications, updating content in the background, and handling background synchronization. Service workers are essential for extensions that need to perform tasks even when the browser window is closed or the user is not actively interacting with the extension.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Content Scripts:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Content scripts are small JavaScript programs that are injected into web pages and can interact with the page's content. They allow extensions to modify the behavior of web pages, add new features, or extract data from the page. Content scripts are executed in the context of the web page and have access to the page's DOM and other resources.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Popups:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Popups are small windows that can be opened by clicking the extension's icon in the browser's toolbar. They provide a way for extensions to display information, offer options, and allow users to interact with the extension. Popups can be used to display menus, provide configuration options, or show notifications.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>These key parts of a Chrome extension work together to create a powerful and versatile tool that can extend the functionality of the browser in various ways. Extensions can range from simple tools that add a specific feature to the browser to complex applications that integrate with web services and provide a rich user experience.
+</span></li></ul><p class="normal_text" style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>The process of creating a Chrome extension involves several steps that require careful planning and execution. Let's delve into each step in more detail:
+</span></p><ul style="padding-left: 20.0px;"><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Learn the Basics:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Start by familiarizing yourself with the fundamental concepts of Chrome extensions. This includes understanding the purpose and benefits of using extensions, as well as the different types of extensions available.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Understand the different components of an extension, such as the manifest file, background scripts, content scripts, and options pages. Learn about the role of each component and how they work together to create a functional extension.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Learn about the Chrome Extension API and the various functions and events it provides. Explore the documentation and examples to understand how to use the API to interact with the browser and perform various tasks.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Familiarize yourself with the development tools available for Chrome extensions, such as the Chrome Extension Developer Tools and the Chrome Extension Manifest Generator. These tools can help you create, debug, and test your extensions more efficiently.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Learn about the best practices and guidelines for developing Chrome extensions. This includes following the Chrome Extension Developer Policies and adhering to the general principles of good software development.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Set Up:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Create a new Chrome extension project using the Chrome Extension Builder or a code editor like Visual Studio Code or Atom.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Set up the necessary files and folders for your extension. This typically includes:
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>A manifest.json file, which specifies the basic information about your extension, such as its name, version, and permissions.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>HTML files for your extension's user interface.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>CSS files for styling your extension's UI.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>JavaScript files for implementing the functionality of your extension.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Include the necessary scripts and libraries to support your extension's functionality. This may include:
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>The Chrome Extension API, which provides access to the Chrome browser's features and functionality.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Third-party libraries, such as jQuery or lodash, which can help you with common tasks like DOM manipulation or data handling.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Once you have set up the basic structure of your extension, you can start developing the functionality and UI of your extension.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Write the HTML code for your extension's user interface
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use HTML to structure the content of your extension's user interface, including pop-ups, context menus, and options pages.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Organize the layout of your interface using elements like divs, spans, and lists.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Include form elements like input fields, buttons, and checkboxes for user input.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use semantic HTML elements to enhance accessibility and ensure that your interface is understandable by assistive technologies.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Use CSS to style your extension and make it visually appealing
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Apply CSS styles to your extension's user interface to customize its appearance.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use colors, fonts, and borders to create a cohesive and visually appealing design.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Add hover effects, animations, and transitions to enhance the user experience.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use media queries to ensure that your extension looks good on different screen sizes and devices.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Write JavaScript code to implement the desired functionality
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use JavaScript to add interactive elements and functionality to your extension's user interface.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Handle button clicks, event listeners, and background tasks using JavaScript functions.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Utilize JavaScript libraries and frameworks to simplify the development process and add advanced features.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Ensure that your JavaScript code is well-organized, readable, and maintainable.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Make use of the Chrome Extension API to interact with the browser and perform tasks
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Familiarize yourself with the Chrome Extension API documentation to understand the available methods and objects.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use API functions to access tabs, read and write data, and communicate with other extensions.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Handle events like browser actions, context menus, and message passing to trigger actions and update the user interface.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Utilize the API to integrate your extension with other browser features and services.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Test:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Test Your Extension Thoroughly:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Create a comprehensive testing plan that covers various scenarios and use cases.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Test the extension's functionality on different types of web pages and content.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Ensure that the extension works consistently across different browser versions and updates.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Conduct regression testing to ensure that new changes do not break existing features.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Use Chrome Developer Tools to Debug Issues:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Familiarize yourself with the Chrome Developer Tools, particularly the Console and Network panels.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Use the Console to monitor errors and warnings generated by your extension.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Analyze network requests and responses to identify any issues with communication between the extension and external resources.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Leverage the debugger to step through your code and identify the source of problems.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Test Your Extension on Different Browsers and Platforms:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Ensure that your extension is compatible with major browsers such as Chrome, Firefox, and Safari.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Test the extension on different operating systems, including Windows, macOS, and Linux.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Consider testing on mobile browsers if your extension is designed for mobile devices.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '>Monitor browser compatibility updates and adjust your extension as needed to maintain compatibility.</span><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Share:
+</strong></span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Publish to Chrome Web Store:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '> Once you're satisfied with your extension, you can share it with others by publishing it to the Chrome Web Store. This platform allows you to distribute your extension to a global audience of Chrome users.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Create Developer Account:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '>&nbsp;&nbsp;To publish your extension on the Chrome Web Store, you'll need to create a developer account. This account gives you access to the tools and resources you need to manage and distribute your extension.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Follow Submission Guidelines:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '>&nbsp;&nbsp;When submitting your extension to the Chrome Web Store, make sure to follow the submission guidelines carefully. These guidelines ensure that your extension meets Google's quality and security standards.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Provide a Clear Description:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '>&nbsp;&nbsp;In your submission, provide a clear and concise description of your extension. This description should include its features, benefits, and any relevant permissions it requires. A well-written description will help users understand what your extension does and why they should install it.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Upload Extension Files:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '>&nbsp;&nbsp;Once you've written your description, you'll need to upload your extension's files to the Chrome Web Store. These files include the extension's code, assets, and metadata.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Submit for Review:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '>&nbsp;&nbsp;After uploading your extension's files, you'll need to submit it for review by the Chrome Web Store team. This review process ensures that your extension meets Google's quality and security standards.
+</span></li><li><span style='font-family: Arial; font-size: 11.0PT; '><strong>Publication and Availability:</strong></span><span style='font-family: Arial; font-size: 11.0PT; '>&nbsp;&nbsp;After review and approval by the Chrome Web Store team, your extension will be available for users to download and install. You can promote your extension through various channels, such as social media, your website, or other online platforms.</span><span style='font-family: Arial; font-size: 11.0PT; '><strong>
+</strong></span></li></ul><p class="normal_text" style='line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>Chrome extensions are a great way to customize your browser and make it more useful and productive. With a little bit of effort, you can even create your own extensions to suit your specific needs.</span><span style=''>
+</span></p><p class="normal_text" style='padding-top: 12.0PT; padding-bottom: 12.0PT; line-height: 1.15; direction: ltr; '><span style='font-family: Arial; font-size: 11.0PT; '>
+</span></p>
+</div><footer>
+    Created for free by
+    <a href="https://gdocweb.com" target="_blank">gdocweb</a>. <br>
+    Convert Google Docs files to full fledged websites <b>for free</b>.
+</footer>
+<script>
+function toggleMenu() {
+    var header = document.querySelector('header');
+    header.classList.toggle('nav-active');
+}
+
+function toggleSubmenu(event, submenuId) {
+    var submenu = document.getElementById(submenuId);
+    var parentLi = submenu.parentElement;
+    parentLi.classList.toggle('submenu-active');
+    event.stopPropagation();
+}
+
+window.onclick = function(event) {
+    var submenus = document.getElementsByClassName("submenu");
+    for (var i = 0; i < submenus.length; i++) {
+        var parentLi = submenus[i].parentElement;
+        if (!parentLi.contains(event.target)) {
+            parentLi.classList.remove('submenu-active');
+        }
+    }
+}
+</script>
+</body>
+</html>
